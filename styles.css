@@ -1,0 +1,167 @@
+:root {
+    box-sizing: border-box;
+    --color-icons :  #e67e22 
+    
+
+    
+}
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+#header {
+    display: flex;
+    height: 90px;
+    background-color: var(--colo);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+
+}
+main {
+    width: 60% ;
+    margin: auto;
+}
+
+/* Navegation bar */
+#nav-bar {
+    display: flex;
+    width: 50%;
+    
+}
+#nav-bar ul  {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+#header-image {   
+    box-sizing: border-box;
+    padding-right: 40px;
+    width: 400px;
+    object-fit: cover;
+    background-position: 50% 20%;
+    
+}
+a {
+    text-decoration: none;
+    
+}
+a:visited {
+    color: #000;
+}
+.logo   {
+    display: flex;
+    width: 50%;
+    
+}
+.nav-link  {
+    position: relative;
+    box-sizing: border-box;
+    list-style: none;
+    font-size: 1.2rem;
+    
+}
+.nav-link::before {
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1.5px; 
+    width: 0; 
+    background-color: black; 
+    transition: width 0.4s ease; 
+    
+    
+    
+}
+.nav-link:hover::before {
+    width: 100%;
+    
+}
+
+/* form */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+form {
+    margin: 3rem auto;
+}
+#submit, #email {
+    display: block;
+    margin: auto;
+}
+#email {
+    width: 280px;
+    height: 22px;
+    border: 1.9px solid #a1a4a3;
+    border-bottom: 1.8px solid #c1d1c2;
+    border-right: 1.8px solid #c1d1c2;
+    border-radius: 2px;
+    padding: 4px;
+    outline: none;
+}
+
+#submit {
+    color: #000;
+    width: 120px;
+    margin-top: 1.5rem;
+    background-color: #fccb1c;
+    border: 0.3px solid #fcdb1c;
+    padding: 4px 8px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: background-color 0.4s ease-in;
+    transition: border  0.4 ease-in;
+}
+#submit:hover {
+    background-color: var(--color-icons);
+    border: 1px solid  #e67e22  ;
+}
+
+
+h1 {
+    font-size: 4rem;
+    border-bottom: 1px solid;
+}
+h1, h2 {
+   margin: auto;
+   text-align: center;
+}
+
+/* Cuando los pixeles de vista esten por debajo de 700 */
+@media (max-width:700px) {
+    #header-image {
+    box-sizing: border-box;
+    padding-right: 40px;
+    width: 280px;
+    object-fit: cover;
+    background-position: 50% 20%;
+    
+    }
+    .nav-link  {
+        list-style: none;
+        font-size: 1rem;
+        margin: 3px;
+    }
+    main {
+        width: 80%;
+    }
+    h1 {
+        font-size: 3.6rem;
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+    }
+}
+
+
