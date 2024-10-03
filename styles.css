@@ -15,7 +15,6 @@ body {
 #header {
     display: flex;
     height: 90px;
-    background-color: var(--colo);
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -49,8 +48,9 @@ main {
     background-position: 50% 20%;
     
 }
-a {
+a, li {
     text-decoration: none;
+    color: #000;
     
 }
 a:visited {
@@ -131,6 +131,7 @@ form {
 h1 {
     font-size: 4rem;
     border-bottom: 1px solid;
+    text-transform: capitalize;
 }
 h1, h2 {
    margin: auto;
@@ -146,6 +147,9 @@ h1, h2 {
     object-fit: cover;
     background-position: 50% 20%;
     
+    }
+    #nav-bar {
+        margin-right: 15px;
     }
     .nav-link  {
         list-style: none;
