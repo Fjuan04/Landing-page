@@ -232,6 +232,7 @@ h1, h2 {
 }
 .sicon:hover {
     fill: var(--color-icons);
+    cursor: pointer;
 }
 
 /* MEMBERSHIPS */
@@ -239,6 +240,11 @@ h1, h2 {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+}
+#memberships::before {
+    content: '';
+    height: 90px;
+
 }
 .price {
     display: inline-block;
@@ -253,8 +259,10 @@ figcaption {
     align-items: center;
     justify-content: center;
     height: 45px;
-    color: red;
+    color: #0009;
     background-color: #dfdfdf;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 /* CUANDO LOS PIXELES DE VISTA ESTEN POR DEBAJO DE 1000 */
 @media (max-width:1000px) {
