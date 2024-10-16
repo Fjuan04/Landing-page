@@ -8,15 +8,14 @@
 </head>
 <body>
     <header id="header">
-        <div class="logo">
-            <img id="header-image" src="images/logo.png" alt="logo">
-        </div>
+            <img id="header-img" src="images/logo.png" alt="logo">
         <nav id="nav-bar">
             <ul>
-                <a href="#features"><li  class="nav-link">Features</li></a>
-                <a href="#services"><li  class="nav-link">Services</li></a>
-                <a href="#contact"><li  class="nav-link">Contact</li></a>
-                <a href="#memberships"><li  class="nav-link">Memberships</li></a>
+                <li class="top"><a href="#features" class="nav-link">Features</a></li>
+                <li class="top"><a href="#services" class="nav-link">Services</a></li>
+                <li class="top"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="top"><a href="#memberships" class="nav-link">Memberships</a></li>
+
             </ul>
         </nav>
     </header>
@@ -27,7 +26,7 @@
             <h1>motorcycle insurance</h1>
             <h2>Ride with confidence, we've got you covered!</h2>
             <form action="https://www.freecodecamp.com/email-submit" id="form">
-                <input placeholder="example@gmail.com" type="email" id="email">
+                <input name="email" placeholder="example@gmail.com" type="email" id="email">
                 <input type="submit" id="submit" value="GET STARTED"> 
             </form>
         </div>
@@ -95,25 +94,61 @@
         </div>
         <hr>
        </section>
+       
        <section id="memberships">
-            <div class="monthly price">
-                <figcaption class="mp">
-                    Monthly
-                </figcaption>
-            </div>
-            <div class="quartely price">
-                <figcaption class="qp">
-                    Quartely
-                </figcaption>
+            <div class="member">
+                <div class="monthly price">
+                    <figcaption class="mp">
+                        Monthly
+                    </figcaption>
+                    <h3 class="cost">
+                        $150 usd
+                    </h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam aperiam quasi inventore aliquid aliquam sapiente delectus consequatur facilis earum sunt.</p>
+                </div>
+                <div class="quartely price">
+                    <figcaption class="qp">
+                        Quartely
+                    </figcaption>
+                    <h3 class="cost">
+                        $540 usd <span class="dashed">$600 usd</span>
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora omnis distinctio eum laborum dolor libero sapiente? Accusamus pariatur cum reprehenderit.   lorem</p>
             </div>
             <div class="annual price">
                 <figcaption class="ap">
                     Annual
                 </figcaption>
+                <h3 class="cost">
+                    $1500 usd <span class="dashed">$1800 usd</span>
+                </h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non quos at molestias repudiandae fuga, vitae atque nobis. Ut, voluptate error?</p>
             </div>
+        </div>     
+
+        <form  action="" class="terms">
+            <label for="terms"> 
+                <input required type="checkbox" name="" id="terms"><span class="bold"> Accept</span> Terms and Conditions
+            </label>
+            <textarea readonly disabled name="" id="">We would like to remind you that the rates for our motorcycle insurance policies may vary based on several factors, such as the value of the bike, the model, the year of manufacture, and other elements to consider. Our goal is to provide you with a personalized coverage that fits your needs and the specifics of your vehicle.
+
+           </textarea>
+        </form>
        </section>
        
     </main>
+    <footer>
+        <div class="footinfo">
+            <ul class="information">
+                <li class="red bold">
+                    <a target="_blank" href="https://wa.me/3206814798">Whatsapp</a>  
+                </li>
+                <li class="red bold">
+                    <a target="_blank" href="https://www.instagram.com/juan_florr?igsh=d3ZiOXlhcW52b2Q5">Instagram</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
     
 </body>
 </html>

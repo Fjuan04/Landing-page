@@ -20,6 +20,7 @@ body {
     width: 100%;
     z-index: 1000;
     background-color: #fff;
+    justify-content: space-between;
 
 }
 main {
@@ -30,7 +31,7 @@ main {
 /* Navegation bar */
 #nav-bar {
     display: flex;
-    width: 50%;
+    width: 40%;
     
 }
 #nav-bar ul  {
@@ -41,7 +42,7 @@ main {
     justify-content: space-evenly;
     
 }
-#header-image {   
+#header-img {   
     box-sizing: border-box;
     padding-right: 40px;
     width: 400px;
@@ -62,11 +63,11 @@ a:visited {
     width: 50%;
     
 }
-.nav-link  {
+.top  {
     position: relative;
     box-sizing: border-box;
     list-style: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     
 }
 .nav-link::before {
@@ -236,39 +237,130 @@ h1, h2 {
 }
 
 /* MEMBERSHIPS */
-#memberships {
-    width: 100%;
+
+#memberships::before {
+    display: block;
+    content: "";
+    height: 90px;
+}
+.member {
     display: flex;
     justify-content: space-evenly;
 }
-#memberships::before {
-    content: '';
-    height: 90px;
 
-}
+
+
 .price {
     display: inline-block;
     width: 20vw;
     box-sizing: border-box;
     border: 1px solid;
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;   
+    transition: 0.5s ease; 
+    
+
     
 }
 figcaption {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 45px;
+    width: 100%;
+    min-height: 35px;
     color: #0009;
     background-color: #dfdfdf;
     font-weight: bolder;
     text-transform: uppercase;
+    transition: 0.5s ease;
+    
 }
+.price:hover {
+    box-shadow: 0 0 10px 1px #000;
+}
+.price:hover figcaption {
+   
+    background-color: var(--color-icons);
+    color: #efefef;
+}
+
+.price p {
+    padding: 8px;
+    display: flex;
+    overflow: scroll;
+
+}
+h3 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.dashed {
+    text-transform: uppercase;
+    text-decoration: line-through;
+    font-weight: 400;
+}
+/* form */
+.terms {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+textarea {
+    text-align: justify;
+    overflow: hidden;
+    height: 190px;
+    margin-top: 40px;
+    padding: 5px;
+    resize: none;
+    border: none;
+}
+footer {
+    height: 75px;
+    width: 100%;
+}
+
+.footinfo {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #cdcdcd;
+    height: 100%;
+}
+
+.footinfo .information {
+    margin: auto 2.5rem auto ;
+    display: flex;
+    align-items: center;
+}
+.information .red {
+    list-style: none;
+    margin: auto 0 auto 2rem;
+}
+
+
+
+
+
 /* CUANDO LOS PIXELES DE VISTA ESTEN POR DEBAJO DE 1000 */
 @media (max-width:1000px) {
     main {
         width: 90%;
 
+    }
+    #nav-bar {
+        width: 60%;
+    }
+    #nav-bar ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .logo {
+        width: 45%;
+    }
+    .nav-link {
+        font-size: 1.12rem;
     }
     #memberships {
         justify-content: space-between;
@@ -279,10 +371,10 @@ figcaption {
 }
 /* Cuando los pixeles de vista esten por debajo de 700 */
 @media (max-width:700px) {
-    #header-image {
+    #header-img {
     box-sizing: border-box;
-    padding-right: 40px;
-    width: 280px;
+    padding-right: 20px;
+    width: 220px;
     object-fit: cover;
     background-position: 50% 20%;
     
@@ -299,13 +391,11 @@ figcaption {
     .icon {
         justify-content: center;
     }
-    #nav-bar {
-        margin-right: 15px;
-    }
     .nav-link  {
         list-style: none;
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin: 3px;
+        ;
     }
     h1 {
         font-size: 3.6rem;
@@ -314,7 +404,7 @@ figcaption {
     h2 {
         text-align: center;
     }
-    #memberships {
+ .member {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -324,10 +414,39 @@ figcaption {
         margin: 2rem auto;
         height: 320px;
         width: 300px;
-        padding: 1px;
-            
+        padding: 0.5px;       
+        border-bottom: 1px solid ;     
     }
-    
+
+    figcaption {
+        height: 45px;
+        transition: 0.5s ease;
+        
+    }
+
+    .price:hover figcaption {
+        height: 65px;
+        background-color: var(--color-icons);
+        color: #efefef;
+    }
+    .footinfo {
+        width: 100%;
+        justify-content: center;
+    }
+    .information {
+        width: 100%;
+        margin: auto;
+        justify-content: space-between ;
+        
+        margin-left: 0;
+    }
+    .information .red {
+        margin: 0   ;
+    }
+
+    #nav-bar {
+        overflow: scroll;
+    }
     
 }
 
@@ -335,6 +454,7 @@ figcaption {
 /* > 300px VISTA */
 
 @media (max-width:320px) {
+    
     #nav-bar {
         overflow: scroll;
     }
@@ -342,5 +462,3 @@ figcaption {
         font-size: 2.5rem;
     }    
 }
-
-
